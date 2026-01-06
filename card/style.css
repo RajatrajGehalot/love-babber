@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#wrapper{
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+#card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+
+   border: 1px solid slategray;
+   border-radius: 10px;
+    padding:18px 28px;
+    background-color: rgb(128 128 128 / 25%);
+    backdrop-filter:blur(4px);
+    z-index: 1;
+
+}
+
+.pic{
+    width:120px;
+    height:120px;
+    border-radius:4rem;
+    background-image: url(./image/WhatsApp\ Image\ 2024-04-14\ at\ 2.55.29\ PM.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 0 -16px;
+    
+}
+
+.shree{
+    font-style:normal;
+    font-size: large;
+    font-weight: 300;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info{
+    font-style:normal;
+    font-size:x-small;
+    font-weight: 50;
+    letter-spacing:0.02rem;
+    color:rgb(150, 154, 158);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    column-gap: 0.4rem;
+}
+
+.share{
+    font-size:xx-small;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-wrap:stable;
+    border:1px solid white;
+    border-radius: 2px;
+    padding:2px 4px;
+    font-weight:700;
+    background: transparent;
+}
+
+.follow{
+    font-size:xx-small;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-wrap:stable;
+    border:1px solid white;
+    border-radius: 2px;
+    padding:2px 4px;
+    font-weight:700;
+}
+
+.circle1{
+    width: 100px;
+    height:100px;
+    background:red;
+    border-radius: 7rem;
+    position: absolute;
+    top:140px ;
+    left: 600px;
+ /*    box-shadow: -5px -8px 10px rgb(255, 0, 13),
+    4px 6px 10px rgb(255, 0, 13); */
+    filter: drop-shadow(0 0 0.75rem crimson);
+    animation: chotu;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+.circle2{
+    
+        width: 150px;
+        height:150px;
+        background:purple;
+        border-radius: 7rem;
+        position: absolute;
+        bottom:100px;
+        right: 570px;
+        /* box-shadow: -5px -8px 10px rgb(128, 0, 115),
+                     4px 6px 10px rgb(128, 0, 115); */
+                     filter: drop-shadow(0 0 50px purple);
+        animation: bada;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+
+@keyframes bada{
+    0%{
+       transform:translate(0px);
+    }
+    100%{
+        transform:translate(20px);
+    }
+}
+
+@keyframes chotu{
+    0%{
+       transform:translate(0px);
+    }
+    100%{
+        transform:translate(10px);
+    }
+}
+
+.share:hover{
+    background-color:white;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.follow:hover{
+    background-color:white;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#modalHeader{
+    display:flex;
+}
+
+#modalIcons{
+    display: flex;
+}
+
+.modal{
+    z-index: 2;
+    position: absolute;
+    background-color:rgb(0 0 0 / 50%);
+    backdrop-filter:blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    gap: 1rem;
+    border:0.00001234rem solid slategray;
+    border-radius:10px;
+    scale: 0;
+}
+
+#x{
+    border: none;
+    background: transparent;
+    color: white;
+} 
+
+#modalHeader{
+    color: white;
+    gap:6.5rem;
+    border-bottom: 0.00001234rem solid slategray;
+    padding-bottom: 0.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#via{
+    color: rgb(255, 255, 200);
+    font-size: smaller;
+    font-weight: 400;
+    line-height: 0.2rem;
+    align-self: flex-start;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#modalIcons{
+    color: white;
+    display:flex;
+     gap:1.27rem;
+}
+
+.circular{
+    border-radius: 180%;
+    border:0.1234rem solid; 
+    padding: 0.5rem;
+}
+
+[class*="fa"]{
+    font-size:small;
+}
+
+#wsap{
+        color: rgb(15, 170, 15);
+    }
+
+#fb{
+    color: blue;
+} 
+
+#insta{
+    color:rgb(228, 100, 121)
+}
+
+#tele{
+    color: rgb(72, 157, 209);
+}
+
+#twitter{
+    color: goldenrod;
+}
+
+.active{
+   scale: 1;
+}
+
+.overlay{
+    opacity: 0;
+    position :fixed;
+    background-color: #5f5f5f83;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+   /*  pointer-events: none; */
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.overlayactive{
+    opacity: 1;
+   /*  pointer-events: initial; */
+}

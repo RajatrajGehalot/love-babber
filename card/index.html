@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f221a0c20e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div id="wrapper">
+            <div id="card">
+                <div class="pic"></div>
+                <div class="shree">Shree</div>
+                <div class="info">Happiness , Family</div>
+                <div class="button">
+                     <button class="share" onclick="openModal()"><i class="fa-solid fa-share"></i> Share My Profile</button>
+                     <div class="follow">Follow Me</div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+
+           <!--  Modal -->
+
+           <div class="modal">
+                     <!-- MODAL HEADER -->
+                     <div id=modalHeader>
+                        <h4>Share My Profile</h4>
+                        <button id="x" onclick="closeModal()"><i class="fa">&#xf00d</i></button>
+                     </div>
+
+                     <!-- MIDDLE HEADER -->
+                     <div id="via">Share this via</div>
+
+                     <div id="modalIcons">
+                           <div class="circular" id="wsap"><i class="fa-brands fa-whatsapp"></i></div>
+                           <div class="circular" id="fb"><i class="fa-brands fa-facebook"></i></div>
+                           <div class="circular" id="insta"><i class="fa-brands fa-instagram"></i></div>
+                           <div class="circular" id="twitter"><i class="fa-brands fa-x-twitter"></i></div>
+                           <div class="circular" id="tele"><i class="fa-brands fa-telegram"></i></div>
+
+                     </div>
+
+           </div>
+
+          <!--  Overlay -->
+          <div class="overlay" onclick="closeModal()"></div>
+        </div>
+
+        <script src="index.js"></script>
+</body>
+</html>
